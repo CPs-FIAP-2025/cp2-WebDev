@@ -8,22 +8,45 @@
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
-
 </div>
+
+
+<div align="center"><strong>
+
+🔗 Acesse o Projeto: [Agnello | Site](https://cps-fiap-2025.github.io/cp2-WebDev/)
+</strong></div>
 
 
 ## ♦ Descrição do Projeto
 
-Nesta etapa, evoluímos o sistema de cadastro de vinhos, agora com a possibilidade de realizar múltiplos cadastros em sequência, utilizando **`prompt()` e `alert()`**. O sistema é capaz de:
+Este projeto faz parte da segunda etapa (Checkpoint 02) da disciplina de Desenvolvimento Web e tem como objetivo aplicar conceitos fundamentais de **JavaScript** na criação de um **sistema de avaliação de estoque e tendência de vinhos** para a fictícia *Vinheria Agnello*.
 
-- Validar as entradas de dados;
-- Verificar automaticamente se o estoque está baixo (menos de 5 unidades);
-- Classificar o vinho como jovem, amadurecido ou antigo, com base na safra;
-- Exibir os dados de cada vinho via `console.log` e `alert()`;
-- Exibir ao final:
-  - O total de cadastros realizados;
-  - Quantos vinhos estão com estoque baixo;
-  - Qual é o vinho com a safra mais antiga.
+Nesta versão, o sistema foi expandido a partir da lógica inicial criada no Checkpoint 01, e agora permite ao usuário realizar o cadastro de múltiplos vinhos de forma sequencial, por meio da interação com janelas `prompt()` e `alert()` no navegador.
+
+### 💻 Funcionalidades Desenvolvidas
+
+1. **Cadastro de Vinhos:**
+   - O sistema solicita via `prompt()` os dados de cada vinho, como nome, safra e quantidade em estoque.
+   - Após cada cadastro, o sistema pergunta ao usuário se deseja cadastrar outro vinho, permitindo múltiplas entradas em sequência.
+
+2. **Validação de Dados:**
+   - Foram criadas **funções específicas** para validar as entradas fornecidas pelo usuário, garantindo que apenas dados válidos sejam aceitos.
+
+3. **Classificação de Vinhos:**
+   - Com base no ano de safra informado, o vinho é classificado em três categorias:
+     - **Jovem**: safra recente;
+     - **Amadurecido**: safra intermediária;
+     - **Antigo**: safra mais distante.
+   - A classificação é feita através de uma função reutilizável, que facilita futuras manutenções e ampliações do sistema.
+
+4. **Análise de Estoque:**
+   - O sistema verifica, após cada cadastro, se a quantidade do vinho está **abaixo do limite mínimo** (menos de 5 unidades), gerando um aviso ao usuário.
+
+5. **Relatório Final:**
+   - Ao finalizar os cadastros, o sistema apresenta um resumo com as seguintes informações:
+     - Total de vinhos cadastrados;
+     - Número de vinhos com estoque baixo;
+     - O vinho com a safra mais antiga cadastrada.
 
 
 ## ♦ Integrantes do Grupo
@@ -31,12 +54,6 @@ Nesta etapa, evoluímos o sistema de cadastro de vinhos, agora com a possibilida
 - Leonardo Da Silva Pinto 564929
 - Samuel Enzo D. Monteiro 564391
 - Lucas Toledo Cortonezi 563271
-
-
-## ♦ Acesse o Projeto
-
-- [Repositório no GitHub](https://github.com/usuario/vinheria-agnello-checkpoint02)
-- [GitHub Pages](https://usuario.github.io/vinheria-agnello-checkpoint02)
 
 
 ## 🎇 Demonstração
