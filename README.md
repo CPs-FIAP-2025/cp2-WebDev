@@ -58,4 +58,4 @@ Nesta versão, o sistema foi expandido a partir da lógica inicial criada no Che
 
 ## 🎇 Demonstração
 
-![Demonstração do sistema](./src/assets/img/imagem%20teste.png)
+![Demonstração do sistema](./src/assets/img/img-demo.png)
