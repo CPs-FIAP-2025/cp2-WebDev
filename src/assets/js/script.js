@@ -33,7 +33,7 @@ function classificar(safra) {
     else {
         alert("Vinho Antigo");
         console.log("Vinho Antigo");
-    }
+    }
 }
 
 // Função para verificar entrada de texto
@@ -83,6 +83,7 @@ function cadastro() {
     cadastros += 1;
     verificarMaisVelho(nome, safra);
 }
+
 // Função para repetir cadastro com validação de "sim" ou "não"
 function iniciarCadastro() {
     let continuar = true;
@@ -93,11 +94,29 @@ function iniciarCadastro() {
         let resposta = prompt("Deseja cadastrar outro vinho? (sim/nao)").toLowerCase();
 
         // Validação: só aceita "sim" ou "não"
-        while (resposta !== "sim" && resposta !== "não") {
+        while (resposta !== "sim" && resposta !== "nao") {
             resposta = prompt("Resposta inválida! Por favor, digite 'sim' ou 'não':").toLowerCase();
         }
 
         if (resposta === "nao") {
             continuar = false;
         }
-    }}
+    }
+
+    // Resumo final após todos os cadastros
+    let resumoFinal = `Cadastro finalizado!\n\n` +
+                      `Total de vinhos cadastrados: ${cadastros}\n` +
+                      `Total de estoques baixos: ${estoquesBaixos}\n` +
+                      `Vinho mais antigo: ${nomeVelho} (Safra: ${maisVelho})\n\n` +
+                      `As informações foram inseridas no console.`;
+
+    console.log("===== RESUMO FINAL =====");
+    console.log("Total cadastrados:", cadastros);
+    console.log("Estoques baixos:", estoquesBaixos);
+    console.log("Mais antigo:", nomeVelho, maisVelho);
+
+    alert(resumoFinal);
+}
+
+// Iniciar o processo
+iniciarCadastro();
