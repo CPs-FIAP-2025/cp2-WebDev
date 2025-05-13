@@ -35,3 +35,26 @@ function classificar(safra) {
         console.log("Vinho Antigo");
     }
 }
+
+// Função para verificar entrada de texto
+function verificarTexto(campo) { 
+    let valor = prompt(`Digite o ${campo} do Vinho:`); 
+    while (valor === "" || valor === null || !isNaN(valor)) { 
+        valor = prompt(`Inválido, tente novamente. Digite o ${campo} do Vinho (somente texto):`);
+    }
+    alert(`${valor}, informação cadastrada com sucesso`);
+    return valor;
+}
+
+// Função para verificar entrada de números
+function verificarNumeros(campo) { 
+    let valor = prompt(`Digite o ${campo} do Vinho:`); 
+    while (valor === "" || valor === null || isNaN(valor)) { 
+        valor = prompt(`Inválido, tente novamente. Digite o ${campo} do Vinho (somente números):`);
+    }
+    alert(`${valor}, número cadastrado com sucesso`);
+    return Number(valor); // convertendo para número
+}
+
+
+
