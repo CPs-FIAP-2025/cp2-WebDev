@@ -83,4 +83,21 @@ function cadastro() {
     cadastros += 1;
     verificarMaisVelho(nome, safra);
 }
+// Função para repetir cadastro com validação de "sim" ou "não"
+function iniciarCadastro() {
+    let continuar = true;
 
+    while (continuar) {
+        cadastro();
+
+        let resposta = prompt("Deseja cadastrar outro vinho? (sim/nao)").toLowerCase();
+
+        // Validação: só aceita "sim" ou "não"
+        while (resposta !== "sim" && resposta !== "não") {
+            resposta = prompt("Resposta inválida! Por favor, digite 'sim' ou 'não':").toLowerCase();
+        }
+
+        if (resposta === "nao") {
+            continuar = false;
+        }
+    }}
