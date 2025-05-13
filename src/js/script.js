@@ -56,5 +56,31 @@ function verificarNumeros(campo) {
     return Number(valor); // convertendo para número
 }
 
+// Função de cadastro
+function cadastro() {
+    let nome = verificarTexto("nome");
+    console.log("Nome: " + nome);
+    let tipo = verificarTexto("tipo");
+    console.log("Tipo do Vinho: " + tipo);
+    let safra = verificarNumeros("safra");
+    console.log("Ano da Safra: " + safra);
 
+    classificar(safra);
+
+    let quantidade = verificarNumeros("estoque");
+    estoque(quantidade); 
+    console.log("Quantidade em estoque: " + quantidade);
+
+    let resumo = `Cadastro concluído com sucesso!\n\n` +
+                 `Nome: ${nome}\n` +
+                 `Tipo: ${tipo}\n` +
+                 `Safra: ${safra}\n` +
+                 `Estoque: ${quantidade}\n\nAs informações foram inseridas no console.`;
+
+    console.log("nome: " + nome, "tipo: " + tipo, "safra: " + safra, "quantidade: " + quantidade);
+    alert(resumo);
+
+    cadastros += 1;
+    verificarMaisVelho(nome, safra);
+}
 
